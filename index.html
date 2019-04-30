@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <title>xstudio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/app.css">
+  <!-- <link rel='stylesheet' href='http://fonts.useso.com/css?family=Source+Code+Pro'> -->
+  
+</head>
+</html>
+<body>
+  <nav class="app-nav">
+  
+    
+      <a class="active" href="/.">home</a>
+    
+  
+    
+      <a href="/archives">archive</a>
+    
+  
+    
+      <a href="/atom.xml">rss</a>
+    
+  
+</nav>
+
+  <header class="app-header">
+  <section class="banner">
+    <div class="placeholder"></div>
+    <!-- <img
+      class="banner-small"
+      data-src="https://images.unsplash.com/photo-1548933035-7ed125b0c069?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=100"
+      src="https://images.unsplash.com/photo-1548933035-7ed125b0c069?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=100"
+      alt="banner"
+    > -->
+  </section>
+
+  <section class="description">
+    <img class="avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjDSL0JbjeCtRSG8t4bxe9tcxQD1fkCsvB68q0QQ8OPeftgcpfOQ" alt="avatar">
+    <h1 class="title"> xstudio </h1>
+    <h3 class="subtitle"> 🎯 Focusing & Drinking Coffee ☕ </h3>
+  </section>
+
+  <ul class="social-list">
+    <a href="https://twitter.com/chuangxie">Twitter</a>
+    <a href="https://github.com/chuangx">GitHub</a>
+    
+  </ul>
+</header>
+
+<main class="index">
+  
+    <article>
+      <h1 class="article-title">
+        <a href="/2019/04/07/Development-of-background-tasks-in-android/">Development of background tasks in android</a>
+      </h1>
+
+      <div class="article-meta">
+        <span class="article-date">Apr 07 2019</span>
+      </div>
+
+      <div class="article-entry">
+      
+        <p>这篇文章主要大致讲解在android上实现后台任务的几种方法，它们之间的区别以及开发中的最佳实践。<br>后台任务 (background tasks/operations) 是一个很宽泛的概念，在android上我们通常指非主线程的任务，例如网络操作，读写数据库／文件或是定时任务等等，这些任务通常耗时较久因而需要异步处理。Android给开发者提供了很多不同的api来做这件事情，比如AsyncTask, Loader, IntentService, JobIntentService, AlarmManager, JobDispatcher, JobScheduler, WorkManager… ah，除了以上这些，我们还有rxjava (the list might keep growing) </p>
+          <div class="more">
+            <a href="/2019/04/07/Development-of-background-tasks-in-android/">Read more</a>
+          </div>
+      
+
+      </div>
+    </article>
+  
+    <article>
+      <h1 class="article-title">
+        <a href="/2019/04/05/Tips-to-build-maintainable-android-projects/">Tips to build maintainable android projects</a>
+      </h1>
+
+      <div class="article-meta">
+        <span class="article-date">Apr 05 2019</span>
+      </div>
+
+      <div class="article-entry">
+      
+        <ul>
+<li>Take lint warnings seriously<ul>
+<li>static code analysis, setup pre-commit check if possible</li>
+<li>use annotations actively to facilitate lint checking<ul>
+<li><code>@Nullable</code>, <code>@NonNull</code></li>
+<li><code>@StringRes</code>, <code>@DrawableRes</code>, <code>@ColorRes</code>, <code>@ColorInt</code></li>
+<li><code>@MainThread</code>, <code>@WorkerThread</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Strings<ul>
+<li>use static final strings instead of random literals everywhere<ul>
+<li>string var has a name, it’s more explicit and gives a meaning</li>
+</ul>
+</li>
+<li>use string.xml for storing texts that are displayed to users</li>
+</ul>
+</li>
+<li>Views<ul>
+<li>utilize <code>tools</code> tag to provide proper preview in android studio</li>
+<li>and of course do not use <code>android:</code> for preview purpose and hopefully those properties get overridden in the code.</li>
+</ul>
+</li>
+</ul>
+
+      
+
+      </div>
+    </article>
+  
+
+  <nav class="page-nav">
+  <span class="page-number current">1</span>
+</nav>
+
+</main>
+
+<footer class="app-footer">
+  <p> Powered by <a href="https://hexo.io"> Hexo </a> ; Themed with <a href="https://github.com/DrakeLeung/hexo-theme-again"> Again </a> </p><p>
+</p></footer>
+
+<script src="/js/app.js"></script>
+
+</body>
+</html>
