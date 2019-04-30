@@ -36,30 +36,4 @@
     
   </entry>
   
-  <entry>
-    <title>Tips to build maintainable android projects</title>
-    <link href="https://github.com/chuangx/2019/04/05/Tips-to-build-maintainable-android-projects/"/>
-    <id>https://github.com/chuangx/2019/04/05/Tips-to-build-maintainable-android-projects/</id>
-    <published>2019-04-05T04:11:32.000Z</published>
-    <updated>2019-04-30T07:32:48.720Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li>Take lint warnings seriously<ul><li>static code analysis, setup pre-commit check if possible</li><li>use annotations actively to facilitate lint checking<ul><li><code>@Nullable</code>, <code>@NonNull</code></li><li><code>@StringRes</code>, <code>@DrawableRes</code>, <code>@ColorRes</code>, <code>@ColorInt</code></li><li><code>@MainThread</code>, <code>@WorkerThread</code></li></ul></li></ul></li><li>Strings<ul><li>use static final strings instead of random literals everywhere<ul><li>string var has a name, it’s more explicit and gives a meaning</li></ul></li><li>use string.xml for storing texts that are displayed to users</li></ul></li><li>Views<ul><li>utilize <code>tools</code> tag to provide proper preview in android studio</li><li>and of course do not use <code>android:</code> for preview purpose and hopefully those properties get overridden in the code.</li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ul&gt;
-&lt;li&gt;Take lint warnings seriously&lt;ul&gt;
-&lt;li&gt;static code analysis, setup pre-commit check if possible&lt;/li&gt;
-&lt;li&gt;use annotations actively to 
-      
-    
-    </summary>
-    
-    
-      <category term="android" scheme="https://github.com/chuangx/tags/android/"/>
-    
-  </entry>
-  
 </feed>

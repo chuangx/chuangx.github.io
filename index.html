@@ -73,48 +73,6 @@
       </div>
     </article>
   
-    <article>
-      <h1 class="article-title">
-        <a href="/2019/04/05/Tips-to-build-maintainable-android-projects/">Tips to build maintainable android projects</a>
-      </h1>
-
-      <div class="article-meta">
-        <span class="article-date">Apr 05 2019</span>
-      </div>
-
-      <div class="article-entry">
-      
-        <ul>
-<li>Take lint warnings seriously<ul>
-<li>static code analysis, setup pre-commit check if possible</li>
-<li>use annotations actively to facilitate lint checking<ul>
-<li><code>@Nullable</code>, <code>@NonNull</code></li>
-<li><code>@StringRes</code>, <code>@DrawableRes</code>, <code>@ColorRes</code>, <code>@ColorInt</code></li>
-<li><code>@MainThread</code>, <code>@WorkerThread</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Strings<ul>
-<li>use static final strings instead of random literals everywhere<ul>
-<li>string var has a name, it’s more explicit and gives a meaning</li>
-</ul>
-</li>
-<li>use string.xml for storing texts that are displayed to users</li>
-</ul>
-</li>
-<li>Views<ul>
-<li>utilize <code>tools</code> tag to provide proper preview in android studio</li>
-<li>and of course do not use <code>android:</code> for preview purpose and hopefully those properties get overridden in the code.</li>
-</ul>
-</li>
-</ul>
-
-      
-
-      </div>
-    </article>
-  
 
   <nav class="page-nav">
   <span class="page-number current">1</span>
