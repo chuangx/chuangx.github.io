@@ -16,7 +16,8 @@ html {
 
 body {
   margin: 0;
-  font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+  font-family: PingFangSC, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, sans-serif;
+  font-size: 15px;
   -webkit-font-smoothing: antialiased; }
 
 a {
@@ -43,12 +44,11 @@ img.emoji {
   right: 0;
   margin: 15px; }
   .app-nav a {
-    color: #5badf0;
     text-transform: capitalize;
     padding: 6px 10px; }
   .app-nav .active {
-    background-color: #5badf0;
-    color: #fff; }
+    border-bottom: 2px solid #FF4E00;
+    color: #FF4E00; }
 
 .app-header {
   text-align: center; }
@@ -60,7 +60,7 @@ img.emoji {
     background-size: cover;
     background-repeat: no-repeat; }
     .app-header .banner .placeholder {
-      padding-bottom: 33.3%; }
+      height: 100px; }
     .app-header .banner img {
       position: absolute;
       top: 0;
@@ -78,7 +78,8 @@ img.emoji {
     height: 100px;
     margin-top: -50px;
     border-radius: 50%;
-    border: 4px solid #fff; }
+    border: 4px solid #fff;
+    object-fit: cover; }
   .app-header .description .title {
     font-size: 1.875rem;
     font-weight: 600;
@@ -90,7 +91,7 @@ img.emoji {
     margin: 0;
     letter-spacing: 1px;
     font-size: .9rem;
-    color: #EB298C;
+    color: #FF4E00;
     padding-bottom: 15px; }
   .app-header .social-list {
     margin: 0;
@@ -102,17 +103,49 @@ img.emoji {
     padding: 8px 12px; }
 
 main.index {
-  max-width: 700px;
+  max-width: 760px;
   margin: 0 auto;
   padding: 15px; }
   main.index article {
     margin-top: 45px; }
+  main.index .more {
+    color: #5badf0;
+    font-weight: 600; }
   main.index .article-entry {
-    padding: 15px 0 30px 0; }
+    line-height: 1.7;
+    /* * markdown it -> anchors in config.yml */ }
+    main.index .article-entry > h2, main.index .article-entry > h3, main.index .article-entry > h4, main.index .article-entry > h5, main.index .article-entry > h6 {
+      margin-bottom: 1rem; }
+    main.index .article-entry > h2 {
+      margin-top: 3rem; }
+    main.index .article-entry > h3 {
+      margin-top: 2rem; }
+    main.index .article-entry > h4 {
+      margin-top: 1.5rem; }
+    main.index .article-entry a {
+      color: #5badf0; }
+    main.index .article-entry a.header-anchor {
+      margin-right: .5rem;
+      display: none; }
+    main.index .article-entry > h2 a.header-anchor {
+      display: inline; }
+    main.index .article-entry > h3:hover .header-anchor,
+    main.index .article-entry > h4:hover .header-anchor,
+    main.index .article-entry > h5:hover .header-anchor,
+    main.index .article-entry > h6:hover .header-anchor {
+      display: inline; }
+    main.index .article-entry img {
+      max-width: 760px; }
+  main.index .article-meta {
+    margin-top: 15px; }
   main.index .article-title {
     margin: 0;
     padding-top: 30px;
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    font-size: 18;
+    font-weight: 500; }
+  main.index .article-excerpt {
+    line-height: 1.7; }
   main.index .article-date {
     color: #aaa; }
   main.index .page-nav {
@@ -129,7 +162,7 @@ main.index {
       color: #5badf0; }
 
 main.archive {
-  max-width: 500px;
+  max-width: 700px;
   padding: 90px 15px 0 15px;
   margin: 0 auto; }
   main.archive article {
@@ -156,7 +189,7 @@ main.archive {
       color: #5badf0; }
 
 main.post {
-  max-width: 700px;
+  max-width: 760px;
   margin: 0 auto;
   padding: 15px; }
   main.post article {
@@ -186,7 +219,7 @@ main.post {
     main.post .article-entry > h6:hover .header-anchor {
       display: inline; }
     main.post .article-entry img {
-      max-width: 700px; }
+      max-width: 760px; }
   main.post .article-title {
     margin: 0;
     text-align: center;
@@ -206,7 +239,7 @@ main.post {
   padding: 15px;
   text-align: center;
   color: #666;
-  font-size: .9rem; }
+  font-size: 12px; }
   .app-footer p {
     margin: 0;
     padding: 3px;
@@ -215,7 +248,7 @@ main.post {
     color: #666; }
 
 .page {
-  max-width: 700px;
+  max-width: 760px;
   margin: 0 auto;
   padding: 15px;
   padding-top: 90px;
@@ -240,7 +273,8 @@ main.post {
     padding: 15px;
     width: 70px;
     height: 70px;
-    border-radius: 50%; }
+    border-radius: 50%;
+    object-fit: cover; }
   .sharing .profile .title {
     margin: 0;
     font-style: italic;
@@ -272,7 +306,8 @@ main.post {
   font-size: 0.9rem; }
 
 .article-entry pre, .article-entry code {
-  font-family: "Source Code Pro", Consolas, Monaco, Menlo, monospace; }
+  font-family: "Source Code Pro", Consolas, Monaco, Menlo, monospace;
+  font-size: 12px; }
 
 .article-entry code {
   background: rgba(0, 0, 0, 0.07);
