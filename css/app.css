@@ -131,13 +131,15 @@ main.index {
     main.index .article-entry img {
       max-width: 760px; }
   main.index .article-meta {
-    margin-top: 15px; }
+    margin-top: 15px;
+    font-size: 0.8rem;
+    font-family: monospace; }
   main.index .article-title {
     margin: 0;
     padding-top: 30px;
     text-transform: capitalize;
-    font-size: 18;
-    font-weight: 500; }
+    font-size: 1.2rem;
+    font-family: monospace; }
   main.index .article-excerpt {
     line-height: 1.7; }
   main.index .article-date {
@@ -164,9 +166,12 @@ main.archive {
   main.archive .article-title {
     margin: 0;
     font-size: 1.2rem;
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    font-family: monospace; }
   main.archive .article-meta {
-    padding-left: 30px; }
+    padding-left: 30px;
+    font-size: 0.8rem;
+    font-family: monospace; }
     main.archive .article-meta .article-date {
       color: #aaa; }
   main.archive .page-nav {
@@ -185,7 +190,8 @@ main.archive {
 main.post {
   max-width: 760px;
   margin: 0 auto;
-  padding: 15px; }
+  padding: 15px;
+  padding-bottom: 120px; }
   main.post article {
     padding-top: 45px;
     line-height: 1.7; }
@@ -218,12 +224,15 @@ main.post {
     margin: 0;
     text-align: center;
     text-transform: capitalize;
-    padding-top: 30px; }
+    padding-top: 30px;
+    font-family: monospace; }
   main.post .article-date {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #aaa; }
+    color: #aaa;
+    font-size: 0.8rem;
+    font-family: monospace; }
   main.post .article-comment {
     margin-top: 90px; }
 
@@ -288,20 +297,22 @@ main.post {
 .code-block, .article-entry pre, .article-entry .highlight {
   background: #2d2d2d;
   margin: 1.6rem 0;
-  padding: 3rem 1.8rem;
+  padding: 1.2rem 1.8rem;
   border-style: solid;
   border-width: 1px 0;
+  border-radius: 6px;
   overflow: auto;
   color: #ccc;
   line-height: 20px; }
 
 .line-numbers, .article-entry .highlight .gutter pre {
   color: #666;
-  font-size: 0.9rem; }
+  font-size: 0.75rem;
+  border-radius: 0px; }
 
 .article-entry pre, .article-entry code {
   font-family: Consolas, Monaco, Menlo, monospace;
-  font-size: 12px; }
+  font-size: 0.7rem; }
 
 .article-entry code {
   background: rgba(0, 0, 0, 0.07);
@@ -309,10 +320,12 @@ main.post {
   padding: 2px 3px;
   border-radius: 2px; }
 
-.article-entry pre code {
-  background: none;
-  text-shadow: none;
-  padding: 0; }
+.article-entry pre {
+  border-radius: 0px; }
+  .article-entry pre code {
+    background: none;
+    text-shadow: none;
+    padding: 0; }
 
 .article-entry blockquote {
   color: #aaa;

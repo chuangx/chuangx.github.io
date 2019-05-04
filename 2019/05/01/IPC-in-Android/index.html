@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <title>IPC in Android | Coffee Thoughts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/app.css">
+  <!-- <link rel='stylesheet' href='http://fonts.useso.com/css?family=Source+Code+Pro'> -->
+  
+</head>
+</html>
+<body>
+  <nav class="app-nav">
+  
+    
+      <a href="/.">home</a>
+    
+  
+    
+      <a href="/archives">archive</a>
+    
+  
+    
+      <a href="/atom.xml">rss</a>
+    
+  
+</nav>
+
+  <main class="post">
+  <article>
+  <h1 class="article-title">
+    <a href="/2019/05/01/IPC-in-Android/">IPC in Android</a>
+  </h1>
+
+  <section class="article-meta">
+    <p class="article-date">May 01 2019</p>
+  </section>
+
+  <section class="article-entry">
+    <p>What IPC (inter-process communication) mechanisms are commonly used in android, and how does it work under the hood? IPC typically gets ignored by app developers as it is so well encapsulated by android system so that we don’t need to care about it. But IPC actually runs everywhere from app starts to any interactions to system or third party apps, so how the magic works?<br><a id="more"></a></p>
+<p>Well, first all, let’s warm up a bit, what IPC mechanisms are supported by linux? We have <strong><em>signals, pipes, sockets, message queues, semaphores and shared memory</em></strong>, etc.</p>
+<p>On android, the underlying mechanisms are still the same, but it’s presented quite differently to developers, let’s run through some scenarios we typically run into:</p>
+<ol>
+<li><p>Share text through system share action sheet</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// share plain text through system action sheet</span></span><br><span class="line">startActivity(</span><br><span class="line">    <span class="comment">// create chooser intent with proper meta data</span></span><br><span class="line">    Intent.createChooser(</span><br><span class="line">        Intent().apply &#123;</span><br><span class="line">            type = <span class="string">"text/plain"</span></span><br><span class="line">            putExtra(Intent.EXTRA_TEXT, <span class="string">"https://chuangx.github.io"</span>)</span><br><span class="line">        &#125;, <span class="string">"checkout this"</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Start a foreground service to play music</p>
+ <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// start music services</span></span><br><span class="line">startService(</span><br><span class="line">    Intent(<span class="keyword">this</span>, MusicService::<span class="class"><span class="keyword">class</span>.<span class="title">java</span>).<span class="title">apply</span> </span>&#123;</span><br><span class="line">        action = ACTION_START</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Retrieve contacts data from phone app</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure></li>
+</ol>
+
+  </section>
+</article>
+
+  <!-- <div class="sharing grid">
+  <section class="profile grid-item grid">
+    <img class="avatar" src="/images/avatar.jpeg" alt="avatar">
+    <div class="grid-item">
+      <p class="title"> Coffee Thoughts </p>
+      <p class="subtitle"> 🎯 Focusing & Drinking Coffee ☕ </p>
+    <div>
+  </div></div></section>
+
+  <section class="share-btns">
+    <a class="twitter-share-button" data-size="large" data-via="chuang_xie" href="https://twitter.com/intent/tweet?text=IPC in Android">
+  Tweet
+</a>
+
+<script>
+  window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  js.async = true;
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));
+</script>
+
+  </section>
+</div>
+ -->
+
+  <!-- 
+    
+<section class="article-comment">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+<script>
+  var disqus_shortname = 'chuang';
+  
+  var disqus_url = 'https://github.com/chuangx/2019/05/01/IPC-in-Android/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+   -->
+</main>
+
+</body>
+</html>
