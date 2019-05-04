@@ -303,7 +303,8 @@ main.post {
   border-radius: 6px;
   overflow: auto;
   color: #ccc;
-  line-height: 20px; }
+  line-height: 1.2rem;
+  font-size: 0.75rem; }
 
 .line-numbers, .article-entry .highlight .gutter pre {
   color: #666;
