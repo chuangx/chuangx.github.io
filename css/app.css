@@ -371,6 +371,9 @@ main.post {
 .article-entry .highlight .line {
   height: 20px; }
 
+.article-entry .highlight .code {
+  font-size: 12px; }
+
 pre .comment,
 pre .title {
   color: #999; }
