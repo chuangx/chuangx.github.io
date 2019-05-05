@@ -297,33 +297,32 @@ main.post {
 .code-block, .article-entry pre, .article-entry .highlight {
   background: #2d2d2d;
   margin: 1.6rem 0;
-  padding: 1rem 1.2rem;
-  border-radius: 6px;
+  padding: 1rem 1.8rem;
+  border-style: solid;
+  border-width: 1px 0;
   overflow: auto;
   color: #ccc;
-  line-height: 1.2rem;
+  line-height: 20px;
   font-size: 0.75rem; }
 
 .line-numbers, .article-entry .highlight .gutter pre {
-  color: #666; }
+  color: #666;
+  font-size: 0.75rem; }
 
 .article-entry pre, .article-entry code {
-  font-family: Consolas, Monaco, Menlo, monospace;
-  font-size: 0.75rem; }
+  font-family: Consolas, Monaco, Menlo, monospace; }
 
 .article-entry code {
   background: rgba(0, 0, 0, 0.07);
   color: #EB298C;
   padding: 2px 3px;
-  border-radius: 2px; }
-
-.article-entry pre {
-  border-radius: 0px;
+  border-radius: 2px;
   font-size: 0.75rem; }
-  .article-entry pre code {
-    background: none;
-    text-shadow: none;
-    padding: 0; }
+
+.article-entry pre code {
+  background: none;
+  text-shadow: none;
+  padding: 0; }
 
 .article-entry blockquote {
   color: #aaa;
@@ -343,35 +342,36 @@ main.post {
     border: 1px solid #ddd;
     padding: 6px 13px; }
 
-.article-entry .highlight {
-  background: #2d2d2d; }
-  .article-entry .highlight pre {
-    border: none;
-    margin: 0;
-    padding: 0;
-    font-size: 0.75rem; }
-  .article-entry .highlight table {
-    margin: 0;
-    width: auto; }
-  .article-entry .highlight td {
-    border: none;
-    padding: 0;
-    margin: 0; }
-  .article-entry .highlight tr {
-    border: none; }
-  .article-entry .highlight figcaption {
-    font-size: 0.75em;
-    color: #999;
-    line-height: 1em;
-    margin-bottom: 1em; }
-    .article-entry .highlight figcaption a {
-      float: right; }
-  .article-entry .highlight .gutter pre {
-    text-align: right;
-    padding-right: 20px;
-    font-size: 0.75rem; }
-  .article-entry .highlight .line {
-    height: 20px; }
+.article-entry .highlight pre {
+  border: none;
+  margin: 0;
+  padding: 0; }
+
+.article-entry .highlight table {
+  margin: 0;
+  width: auto; }
+
+.article-entry .highlight td {
+  border: none;
+  padding: 0; }
+
+.article-entry .highlight tr {
+  border: 0; }
+
+.article-entry .highlight figcaption {
+  font-size: 0.85em;
+  color: #999;
+  line-height: 1em;
+  margin-bottom: 1em; }
+  .article-entry .highlight figcaption a {
+    float: right; }
+
+.article-entry .highlight .gutter pre {
+  text-align: right;
+  padding-right: 20px; }
+
+.article-entry .highlight .line {
+  height: 20px; }
 
 pre .comment,
 pre .title {
