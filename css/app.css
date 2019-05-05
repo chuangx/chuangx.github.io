@@ -321,7 +321,8 @@ main.post {
   border-radius: 2px; }
 
 .article-entry pre {
-  border-radius: 0px; }
+  border-radius: 0px;
+  font-size: 0.75rem; }
   .article-entry pre code {
     background: none;
     text-shadow: none;
@@ -348,7 +349,8 @@ main.post {
 .article-entry .highlight pre {
   border: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-size: 0.75rem; }
 
 .article-entry .highlight table {
   margin: 0;
@@ -371,7 +373,8 @@ main.post {
 
 .article-entry .highlight .gutter pre {
   text-align: right;
-  padding-right: 20px; }
+  padding-right: 20px;
+  font-size: 0.75rem; }
 
 .article-entry .highlight .line {
   height: 20px; }
