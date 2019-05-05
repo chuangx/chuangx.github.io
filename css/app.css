@@ -97,7 +97,7 @@ img.emoji {
     padding: 8px 12px; }
 
 main.index {
-  max-width: 760px;
+  max-width: 770px;
   margin: 0 auto;
   padding: 15px; }
   main.index article {
@@ -129,7 +129,7 @@ main.index {
     main.index .article-entry > h6:hover .header-anchor {
       display: inline; }
     main.index .article-entry img {
-      max-width: 760px; }
+      max-width: 770px; }
   main.index .article-meta {
     margin-top: 15px;
     font-size: 0.8rem;
@@ -165,7 +165,7 @@ main.archive {
     margin-top: 30px; }
   main.archive .article-title {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-transform: capitalize;
     font-family: monospace; }
   main.archive .article-meta {
@@ -188,7 +188,7 @@ main.archive {
       color: #5badf0; }
 
 main.post {
-  max-width: 760px;
+  max-width: 770px;
   margin: 0 auto;
   padding: 15px;
   padding-bottom: 120px; }
@@ -219,7 +219,7 @@ main.post {
     main.post .article-entry > h6:hover .header-anchor {
       display: inline; }
     main.post .article-entry img {
-      max-width: 760px; }
+      max-width: 770px; }
   main.post .article-title {
     margin: 0;
     text-align: center;
@@ -251,7 +251,7 @@ main.post {
     color: #666; }
 
 .page {
-  max-width: 760px;
+  max-width: 770px;
   margin: 0 auto;
   padding: 15px;
   padding-top: 90px;
@@ -297,8 +297,7 @@ main.post {
 .code-block, .article-entry pre, .article-entry .highlight {
   background: #2d2d2d;
   margin: 1.6rem 0;
-  padding: 1.2rem 1.8rem;
-  border-style: solid;
+  padding: 1rem 1.8rem;
   border-width: 1px 0;
   border-radius: 6px;
   overflow: auto;
@@ -313,7 +312,7 @@ main.post {
 
 .article-entry pre, .article-entry code {
   font-family: Consolas, Monaco, Menlo, monospace;
-  font-size: 0.7rem; }
+  font-size: 0.75rem; }
 
 .article-entry code {
   background: rgba(0, 0, 0, 0.07);
@@ -363,7 +362,7 @@ main.post {
   border: 0; }
 
 .article-entry .highlight figcaption {
-  font-size: 0.85em;
+  font-size: 0.75em;
   color: #999;
   line-height: 1em;
   margin-bottom: 1em; }
