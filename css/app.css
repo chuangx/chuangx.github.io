@@ -303,11 +303,11 @@ main.post {
   overflow: auto;
   color: #ccc;
   line-height: 20px;
-  font-size: 0.75rem; }
+  font-size: 12px; }
 
 .line-numbers, .article-entry .highlight .gutter pre {
   color: #666;
-  font-size: 0.75rem; }
+  font-size: 12px; }
 
 .article-entry pre, .article-entry code {
   font-family: Consolas, Monaco, Menlo, monospace; }
@@ -317,7 +317,7 @@ main.post {
   color: #EB298C;
   padding: 2px 3px;
   border-radius: 2px;
-  font-size: 0.75rem; }
+  font-size: 12px; }
 
 .article-entry pre code {
   background: none;
