@@ -302,12 +302,10 @@ main.post {
   border-width: 1px 0;
   overflow: auto;
   color: #ccc;
-  line-height: 20px;
   font-size: 12px; }
 
 .line-numbers, .article-entry .highlight .gutter pre {
-  color: #666;
-  font-size: 12px; }
+  color: #666; }
 
 .article-entry pre, .article-entry code {
   font-family: Consolas, Monaco, Menlo, monospace; }
