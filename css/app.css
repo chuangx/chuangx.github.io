@@ -300,6 +300,7 @@ main.post {
   padding: 1rem 1.8rem;
   border-style: solid;
   border-width: 1px 0;
+  border-radius: 6px;
   overflow: auto;
   color: #ccc;
   font-size: 12px; }
@@ -358,7 +359,7 @@ main.post {
   border: 0; }
 
 .article-entry .highlight figcaption {
-  font-size: 0.85em;
+  font-size: 0.8em;
   color: #999;
   line-height: 1em;
   margin-bottom: 1em; }
@@ -371,7 +372,7 @@ main.post {
 
 .article-entry .highlight .line {
   height: 20px;
-  font-size: 12px; }
+  font-size: 0.8rem; }
 
 pre .comment,
 pre .title {
