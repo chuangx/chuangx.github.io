@@ -297,8 +297,7 @@ main.post {
 .code-block, .article-entry pre, .article-entry .highlight {
   background: #2d2d2d;
   margin: 1.6rem 0;
-  padding: 1rem 1.8rem;
-  border-width: 1px 0;
+  padding: 1rem 1.2rem;
   border-radius: 6px;
   overflow: auto;
   color: #ccc;
@@ -306,9 +305,7 @@ main.post {
   font-size: 0.75rem; }
 
 .line-numbers, .article-entry .highlight .gutter pre {
-  color: #666;
-  font-size: 0.75rem;
-  border-radius: 0px; }
+  color: #666; }
 
 .article-entry pre, .article-entry code {
   font-family: Consolas, Monaco, Menlo, monospace;
@@ -358,10 +355,11 @@ main.post {
 
 .article-entry .highlight td {
   border: none;
-  padding: 0; }
+  padding: 0;
+  margin: 0; }
 
 .article-entry .highlight tr {
-  border: 0; }
+  border: none; }
 
 .article-entry .highlight figcaption {
   font-size: 0.75em;
