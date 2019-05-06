@@ -225,7 +225,8 @@ main.post {
     text-align: center;
     text-transform: capitalize;
     padding-top: 30px;
-    font-family: monospace; }
+    font-family: monospace, Consolas, Monaco, Menlo;
+    font-size: 1.5rem; }
   main.post .article-date {
     text-align: center;
     text-transform: uppercase;
@@ -309,7 +310,7 @@ main.post {
   color: #666; }
 
 .article-entry pre, .article-entry code {
-  font-family: Consolas, Monaco, Menlo, monospace; }
+  font-family: monospace, Consolas, Monaco, Menlo; }
 
 .article-entry code {
   background: rgba(0, 0, 0, 0.07);
