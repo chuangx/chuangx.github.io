@@ -36,7 +36,9 @@ img.emoji {
   position: absolute;
   top: 0;
   right: 0;
-  margin: 15px; }
+  margin: 15px;
+  font-family: "Lucida Grande", Georgia, "Times New Roman", serif;
+  font-size: 0.8rem; }
   .app-nav a {
     text-transform: capitalize;
     padding: 6px 10px; }
@@ -84,7 +86,8 @@ img.emoji {
   .app-header .description .subtitle {
     margin: 0;
     letter-spacing: 1px;
-    font-size: .9rem;
+    font-size: .8rem;
+    font-family: PingFangSC, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, sans-serif;
     color: #FF4E00;
     padding-bottom: 15px; }
   .app-header .social-list {
@@ -139,7 +142,7 @@ main.index {
     padding-top: 30px;
     text-transform: capitalize;
     font-size: 1.2rem;
-    font-family: monospace; }
+    font-family: "Lucida Grande", Georgia, "Times New Roman", serif; }
   main.index .article-excerpt {
     line-height: 1.7; }
   main.index .article-date {
@@ -225,7 +228,7 @@ main.post {
     text-align: center;
     text-transform: capitalize;
     padding-top: 30px;
-    font-family: monospace, Consolas, Monaco, Menlo;
+    font-family: "Lucida Grande", Georgia, "Times New Roman", serif;
     font-size: 1.5rem; }
   main.post .article-date {
     text-align: center;
@@ -310,7 +313,7 @@ main.post {
   color: #666; }
 
 .article-entry pre, .article-entry code {
-  font-family: monospace, Consolas, Monaco, Menlo; }
+  font-family: Monaco, Menlo; }
 
 .article-entry code {
   background: rgba(0, 0, 0, 0.07);
