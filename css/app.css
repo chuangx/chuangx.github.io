@@ -38,7 +38,7 @@ img.emoji {
   right: 0;
   margin: 15px;
   font-family: "Lucida Grande", Georgia, "Times New Roman", serif;
-  font-size: 0.8rem; }
+  font-size: 0.9rem; }
   .app-nav a {
     text-transform: capitalize;
     padding: 6px 10px; }
@@ -170,7 +170,7 @@ main.archive {
     margin: 0;
     font-size: 1.1rem;
     text-transform: capitalize;
-    font-family: monospace; }
+    font-family: "Lucida Grande", Georgia, "Times New Roman", serif; }
   main.archive .article-meta {
     padding-left: 30px;
     font-size: 0.8rem;
