@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <title>IPC in Android | Coffee Thoughts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" href="/coffee.ico">
+  <link rel="stylesheet" href="/css/app.css">
+  <!-- <link rel='stylesheet' href='http://fonts.useso.com/css?family=Source+Code+Pro'> -->
+  
+</head>
+</html>
+<body>
+  <nav class="app-nav">
+  
+    
+      <a href="/.">home</a>
+    
+  
+    
+      <a href="/archives">archive</a>
+    
+  
+    
+      <a href="/atom.xml">rss</a>
+    
+  
+</nav>
+
+  <main class="post">
+  <article>
+  <h1 class="article-title">
+    <a href="/2019/03/01/IPC-in-Android/">IPC in Android</a>
+  </h1>
+
+  <section class="article-meta">
+    <p class="article-date">March 01 2019</p>
+  </section>
+
+  <section class="article-entry">
+    <p>What IPC (inter-process communication) mechanisms are commonly used in android, and how does it work under the hood? IPC typically gets ignored by app developers as it is so well encapsulated by android system so that we don’t need to care about it (<em>i lied about this part</em> - we’ll talk about this later in this article). But IPC actually runs everywhere from app starts to any interactions to system or third party apps, so how the magic works?<br><a id="more"></a></p>
+<p>Well, first all, let’s warm up a bit, what IPC mechanisms are supported by linux? We have <strong><em>signals, pipes, sockets, message queues, semaphores and shared memory</em></strong>, etc.</p>
+<p>On android, the underlying mechanisms are still the same, but it’s presented quite differently to developers, let’s quickly run through tasks below</p>
+<ol>
+<li>Share text through system action sheet - <code>startActivity(Intent.createChooser(intent_data))</code></li>
+<li>Start a foreground service to play music - <code>startService(Intent(this, MusicService::class.java))</code></li>
+<li>Retrieve contacts from phone app by using content provider</li>
+<li>Send &amp; handle broadcast event</li>
+</ol>
+<p>Above scenarios cover the 4 fundamental components in android. For the first one, when we make <code>startActivity</code> call to share content through intent to another app, how is the data being passed around? Apps are running in its separate processes, so IPC is clearly involved in this (same applies to the rest 3 examples above), let’t dive into this.</p>
+<hr>
+<p><em>I’ll come back to this when I have more time, stay tuned.</em></p>
+
+  </section>
+</article>
+
+  <!-- <div class="sharing grid">
+  <section class="profile grid-item grid">
+    <img class="avatar" src="/images/avatar.jpeg" alt="avatar">
+    <div class="grid-item">
+      <p class="title"> Coffee Thoughts </p>
+      <p class="subtitle"> Focusing & Drinking Coffee ☕ </p>
+    <div>
+  </div></div></section>
+
+  <section class="share-btns">
+    <a class="twitter-share-button" data-size="large" data-via="chuang_xie" href="https://twitter.com/intent/tweet?text=IPC in Android">
+  Tweet
+</a>
+
+<script>
+  window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  js.async = true;
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));
+</script>
+
+  </section>
+</div>
+ -->
+
+  <!-- 
+    
+<section class="article-comment">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+<script>
+  var disqus_shortname = 'chuang';
+  
+  var disqus_url = 'https://github.com/chuangx/2019/03/01/IPC-in-Android/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+   -->
+</main>
+
+</body>
+</html>
