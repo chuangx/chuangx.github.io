@@ -38,19 +38,16 @@
   </section>
 
   <section class="article-entry">
-    <p>What IPC (inter-process communication) mechanisms are commonly used in android, and how does it work under the hood? IPC typically gets ignored by app developers as it is so well encapsulated by android system so that we don’t need to care about it. But IPC actually runs everywhere from app starts to any interactions to system or third party apps, so how the magic works?<br><a id="more"></a></p>
+    <p>What IPC (inter-process communication) mechanisms are commonly used in android, and how does it work under the hood? IPC typically gets ignored by app developers as it is so well encapsulated by android system so that we don’t need to care about it (<em>i lied about this part</em> - we’ll talk about this later in this article). But IPC actually runs everywhere from app starts to any interactions to system or third party apps, so how the magic works?<br><a id="more"></a></p>
 <p>Well, first all, let’s warm up a bit, what IPC mechanisms are supported by linux? We have <strong><em>signals, pipes, sockets, message queues, semaphores and shared memory</em></strong>, etc.</p>
-<p>On android, the underlying mechanisms are still the same, but it’s presented quite differently to developers, let’s run through some scenarios we typically run into:</p>
+<p>On android, the underlying mechanisms are still the same, but it’s presented quite differently to developers, let’s quickly run through tasks below</p>
 <ol>
-<li><p>Share text through system share action sheet</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// share plain text through system action sheet</span></span><br><span class="line"> startActivity(</span><br><span class="line">     <span class="comment">// create chooser intent with proper meta data</span></span><br><span class="line">     Intent.createChooser(</span><br><span class="line">         Intent().apply &#123;</span><br><span class="line">             type = <span class="string">"text/plain"</span></span><br><span class="line">             putExtra(Intent.EXTRA_TEXT, <span class="string">"https://chuangx.github.io"</span>)</span><br><span class="line">         &#125;, <span class="string">"checkout this"</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Start a foreground service to play music</p>
- <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// start music services</span></span><br><span class="line">startService(</span><br><span class="line">   Intent(<span class="keyword">this</span>, MusicService::<span class="class"><span class="keyword">class</span>.<span class="title">java</span>).<span class="title">apply</span> </span>&#123;</span><br><span class="line">       action = ACTION_START</span><br><span class="line">   &#125;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Retrieve contacts data from phone app</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure></li>
+<li>Share text through system action sheet - <code>startActivity(Intent.createChooser(intent_data))</code></li>
+<li>Start a foreground service to play music - <code>startService(Intent(this, MusicService::class.java))</code></li>
+<li>Retrieve contacts from phone app by using content provider</li>
+<li>Send &amp; handle broadcast event</li>
 </ol>
+<p>Above scenarios cover the 4 fundamental components in android. For the first one, when we make <code>startActivity</code> call to share content through intent to another app, how is the data being passed around? Apps are running in its separate processes, so IPC is clearly involved in this (same applies to the rest 3 examples above), let’t dive into this.</p>
 
   </section>
 </article>
