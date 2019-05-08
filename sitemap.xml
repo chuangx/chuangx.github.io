@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://github.com/chuangx/2019/05/03/Embracing-kotlin/</loc>
+    
+    <lastmod>2019-05-08T18:03:53.734Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://github.com/chuangx/2019/03/01/IPC-in-Android/</loc>
     
-    <lastmod>2019-05-08T08:13:06.158Z</lastmod>
+    <lastmod>2019-05-08T09:32:58.349Z</lastmod>
     
   </url>
   
@@ -19,13 +26,6 @@
     <loc>https://github.com/chuangx/2018/03/26/Picture-in-picture-on-Android-O/</loc>
     
     <lastmod>2019-05-08T08:08:28.573Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://github.com/chuangx/2019/05/03/Embracing-kotlin/</loc>
-    
-    <lastmod>2019-05-08T06:32:47.645Z</lastmod>
     
   </url>
   
